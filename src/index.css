@@ -1,0 +1,151 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+@custom-variant light (&:where(.light, .light *));
+
+:root {
+  --theme-bg-main: #0A1E38;
+  --theme-bg-surface: #071629;
+  --theme-bg-card: #0D223E;
+  --theme-text-primary: #F8FAFC;
+  --theme-text-secondary: #CBD5E1;
+  --theme-text-muted: #94A3B8;
+  --theme-border: rgba(255, 255, 255, 0.1);
+  --theme-border-strong: rgba(255, 255, 255, 0.2);
+}
+
+html.light, [data-theme="light"] {
+  --theme-bg-main: #F4F6F9;
+  --theme-bg-surface: #FFFFFF;
+  --theme-bg-card: #FFFFFF;
+  --theme-text-primary: #0F172A;
+  --theme-text-secondary: #334155;
+  --theme-text-muted: #64748B;
+  --theme-border: #E2E8F0;
+  --theme-border-strong: #CBD5E1;
+  color-scheme: light;
+}
+
+html.dark, [data-theme="dark"] {
+  --theme-bg-main: #0A1E38;
+  --theme-bg-surface: #071629;
+  --theme-bg-card: #0D223E;
+  --theme-text-primary: #F8FAFC;
+  --theme-text-secondary: #CBD5E1;
+  --theme-text-muted: #94A3B8;
+  --theme-border: rgba(255, 255, 255, 0.1);
+  --theme-border-strong: rgba(255, 255, 255, 0.2);
+  color-scheme: dark;
+}
+
+/* Base transitions for smooth theme toggling */
+body {
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+/* Light mode specific element adjustments */
+html.light .bg-\[\#0A1E38\] {
+  background-color: #F4F6F9 !important;
+}
+
+html.light .bg-\[\#071629\] {
+  background-color: #FFFFFF !important;
+}
+
+html.light .bg-\[\#0D223E\],
+html.light .bg-\[\#132A4A\] {
+  background-color: #FFFFFF !important;
+}
+
+html.light .bg-slate-900\/80,
+html.light .bg-slate-950\/80,
+html.light .bg-slate-900,
+html.light .bg-slate-950 {
+  background-color: #FFFFFF !important;
+}
+
+html.light .border-white\/10,
+html.light .border-white\/15,
+html.light .border-white\/20,
+html.light .border-white\/30 {
+  border-color: #E2E8F0 !important;
+}
+
+html.light .text-white {
+  color: #0F172A !important;
+}
+
+html.light .text-slate-100 {
+  color: #0F172A !important;
+}
+
+html.light .text-slate-200 {
+  color: #1E293B !important;
+}
+
+html.light .text-slate-300 {
+  color: #334155 !important;
+}
+
+html.light .text-slate-400 {
+  color: #64748B !important;
+}
+
+/* Preserving high-contrast buttons and badge colors in light mode */
+html.light .bg-\[\#E85D2C\] {
+  background-color: #E85D2C !important;
+  color: #FFFFFF !important;
+}
+
+html.light .bg-\[\#E85D2C\] * {
+  color: #FFFFFF !important;
+}
+
+html.light .text-\[\#E85D2C\] {
+  color: #D64614 !important;
+}
+
+html.light .bg-\[\#C7940A\] {
+  background-color: #D97706 !important;
+  color: #0F172A !important;
+}
+
+html.light .bg-\[\#C7940A\] * {
+  color: #0F172A !important;
+}
+
+html.light .text-\[\#C7940A\] {
+  color: #B45309 !important;
+}
+
+html.light .bg-emerald-600 {
+  background-color: #059669 !important;
+  color: #FFFFFF !important;
+}
+
+html.light .bg-emerald-600 * {
+  color: #FFFFFF !important;
+}
+
+html.light input,
+html.light select,
+html.light textarea {
+  background-color: #FFFFFF !important;
+  color: #0F172A !important;
+  border-color: #CBD5E1 !important;
+}
+
+html.light input::placeholder,
+html.light textarea::placeholder {
+  color: #94A3B8 !important;
+}
+
+html.light .shadow-2xl,
+html.light .shadow-xl {
+  box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.08), 0 8px 10px -6px rgba(15, 23, 42, 0.04) !important;
+}
+
+/* Preserve interactive canvas and 3D background */
+canvas {
+  touch-action: none;
+}

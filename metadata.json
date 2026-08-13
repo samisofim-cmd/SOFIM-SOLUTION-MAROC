@@ -1,0 +1,6 @@
+{
+  "name": "SOFIM SOLUTION MAROC",
+  "description": "Site officiel de SOFIM SOLUTION MAROC - Fabricant exclusif de cales en béton fibre haute performance (BFHP) et expert en solutions industrielles (levage, fermetures, électricité, sécurité incendie, SAV) à Tanger, Maroc.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
